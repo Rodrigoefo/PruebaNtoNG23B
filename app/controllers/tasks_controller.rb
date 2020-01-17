@@ -7,6 +7,7 @@ class TasksController < ApplicationController
 
   def show
     @task = Task.find(params[:id])
+    @ranking = @task.users.order('created_at').limit(5) 
   end
 
   def completed

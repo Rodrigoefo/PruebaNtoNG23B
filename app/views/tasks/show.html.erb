@@ -7,8 +7,16 @@
 <br>
 <h3>Usuarios que han realiazado la tareas</h3>
 
-<%@task.users.each do |task| %>
+<%@task.users.each do |user| %>
   <ul>
-    <li>task.users.email</li>
+    <li><%=user.email %></li>
+  </ul>
+  <%end  %>
+
+<p>Usuarios que completaron la tarea</p>
+<%@ranking.each do |user| %>
+  <ul>
+    <li><%=user.email %></li>
+    <li><%=user.created_at %></li>
   </ul>
   <%end  %>
